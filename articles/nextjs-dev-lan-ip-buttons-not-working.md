@@ -1,5 +1,5 @@
 ---
-title: "Next.js 16のdev環境でボタンが反応しない？LAN IPアクセス時のHMR WebSocket問題と解決策"
+title: "Next.js 16のdev環境でボタンが反応しない問題"
 emoji: "🔧"
 type: "tech"
 topics: ["nextjs", "react", "pnpm", "shadcn"]
@@ -14,15 +14,12 @@ Next.js 16 の開発環境で、ページは表示されるのにボタンやリ
 
 ## 環境
 
-- Next.js 16.2.x（React 19.2.4）
-- pnpm
-- shadcn/ui v4（@base-ui/react）
-- macOS
+- Next.js 16.2.x
 
 ## 症状
 
 - `pnpm run dev` で開発サーバーを起動
-- `http://192.168.0.3:3000/`（LAN IP）でブラウザからアクセス
+- `http://192.168.0.3:3000/`（LAN IP）でブラウザからアクセスした
 - ページは正常に表示される
 - しかし、ボタン、リンク、ドロップダウンなど、すべてのインタラクティブ要素がクリックに反応しない
 - `http://localhost:3000/` でアクセスすると正常に動作する
