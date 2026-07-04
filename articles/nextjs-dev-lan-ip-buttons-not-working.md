@@ -1,5 +1,5 @@
 ---
-title: "Next.jsのdev環境でボタンが反応しない問題"
+title: "Next.jsのdev環境でボタンやドロップダウンなどのインタラクティブな要素がクリックに反応しない問題について"
 emoji: "🔧"
 type: "tech"
 topics: ["nextjs"]
