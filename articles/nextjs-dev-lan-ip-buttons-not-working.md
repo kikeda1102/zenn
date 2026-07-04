@@ -39,6 +39,7 @@ Local（http://localhost:3000）で開くと問題は起きなかった。
 ```
 
 Next.js は dev モードにおいて、クロスオリジン（異なるホスト名からのアクセス）による開発リソースへのリクエストをデフォルトでブロックする。
+([公式ドキュメント](https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins))
 Network の IP アドレスからアクセスすると localhost とは異なるオリジンとみなされ、HMR（Hot Module Replacement = コード変更をブラウザへ即座に反映する仕組み）用の WebSocket 接続がブロックされる。
 
 この接続が確立できないと、ハイドレーション（サーバーで生成した HTML に React のイベント処理を紐づける工程）が完了しない。
