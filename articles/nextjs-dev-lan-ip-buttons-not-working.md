@@ -6,6 +6,8 @@ topics: ["nextjs"]
 published: true
 ---
 
+Next.js での開発中にこの問題に遭遇し、Claude Code に原因を調査させましたがすぐには特定してくれなかったため、記事にまとめておきたいと思います。
+
 ## 環境
 
 - Next.js 16.2.x
@@ -52,16 +54,13 @@ Network の IP アドレスからアクセスすると localhost とは異なる
 
 ### allowedDevOrigins を設定する
 
-例えばスマートフォンなど別デバイスから確認したい場合は、`next.config.ts` に [`allowedDevOrigins`](https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins) を追加する。
+例えばスマートフォンなどの別デバイスから確認したい場合は、`next.config.ts` に [`allowedDevOrigins`](https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins) を追加する。
 
 ```ts
 const nextConfig: NextConfig = {
   allowedDevOrigins: ["192.168.0.1"], // IP アドレスはネットワーク環境によって異なるため、自分の環境に合わせて書き換える
 };
 ```
-
-値は URL ではなく、ホスト名または IP アドレスのみを指定する。
-ターミナルの警告メッセージに表示される値をそのまま使えばよい。
 
 設定後に dev サーバーを再起動すると、Network のアドレスからアクセスしてもボタンが正常に動作するようになる。
 
