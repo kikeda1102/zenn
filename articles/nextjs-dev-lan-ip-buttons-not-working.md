@@ -14,17 +14,19 @@ published: true
 
 `pnpm run dev` で開発サーバーを起動すると、ターミナルに2つのアドレスが表示される。
 
+![dev サーバー起動時のターミナル出力。Local と Network の2つのアドレスが表示されている。](/images/nextjs-dev-terminal-output.png)
+
 ```
 ▲ Next.js 16.2.9 (Turbopack)
 - Local:    http://localhost:3000
 - Network:  http://172.20.10.4:3000
 ```
 
-Network 側のアドレスをブラウザで開いたところ、ページは正常に表示された。
+Network 側のアドレス (http://172.20.10.4:3000) を Cmd + クリックしてブラウザで開いたところ、ページは正常に表示された。
 しかし、ボタンやドロップダウンなどのインタラクティブな要素がクリックに一切反応しなかった。
 `a` タグによるリンクは機能するが、React が制御するイベントが動作しない状態だった。
 
-Local（localhost）で開くと問題は起きなかった。
+Local（http://localhost:3000）で開くと問題は起きなかった。
 
 ## 原因
 
